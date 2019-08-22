@@ -1,0 +1,284 @@
+#Layout{
+  width:100%; 
+}
+#Header{
+    width:100%;
+    height: 100px; 
+    text-align: center;
+    font-family: "Whale"; 
+    font-size:30px;
+    padding-bottom: 5px;
+    font-size: 10px;
+}
+#Menu{
+    display:inline-block;
+    height:10%;
+    width:100%;
+	text-align: center;
+	
+}
+#top{
+	background-image:url("img/background.jpg");
+}
+.pacmenu{
+	height:30px;
+	width:30px;
+}
+.buttonsleft{
+	transition:All .5s ease;
+	transform: rotate(5deg) scale(1.2);
+	
+}
+.buttonsright{
+	transition:All .5s ease;
+	transform: rotate(-5deg) scale(1.2);
+	
+}
+.buttons button{
+     width:15%;
+    color:black;
+     display:inline-block;
+    background-color:white;
+      font-family: "Whale";
+    font-size: 15px;
+        cursor: pointer;
+    border-style:bold;
+    border-width: medium;
+    outline: none;
+    box-shadow: 0 5px #999;
+    border-radius: 10%;
+    margin-right: 30px;
+	width: 150px;
+	
+}
+.buttons button:hover {
+    background-color:whitesmoke;
+}
+.buttons button:active {
+    background-color:whitesmoke;
+  box-shadow: 5px 0 gray;
+  transform: translateX(4px);
+}
+#Content{
+	background-image:url("img/back3.jpg");
+    height:470px;
+    width:89%;
+    float:left;
+    text-align: center;
+	border-style:solid;
+	border-color: lightgray;
+}
+#Welcome{
+   margin-left: 10px;
+   visibility:visible;
+         font-family: "Whale";
+    font-size: 25px;
+    margin-top: 10px;
+}
+.welcomebuttons button{
+     width:200px;
+    height: 40px;
+    font-size: 20px;
+     display:inline-block;
+    color: white;
+    background-color:darkblue;
+      font-family: "Whale";
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-style:inset;
+    border-radius: 5%;
+        outline: none;
+}
+#Details{
+    background-color: lightgrey;
+    height:480px;
+    width:9.5%;
+    float:right;
+         font-family: "Whale";
+		text-align: center;
+}#Footer{
+    background-color:lightgray;
+    clear:both;
+    height: 20px;
+         font-family: "Whale";
+}
+.title{
+    font-size: 30px;
+}
+.sendbuttons{
+         width:100px;
+    height: 30px;
+     display:inline-block;
+    background-color:darkblue;
+      font-family: "Whale";
+    border-radius: 10%;
+    cursor: pointer;
+        border-style:inset;
+		color:white;
+	font-size: 17px;
+        outline: none;
+}
+.sendbuttons:active {
+  transform: translateX(4px);
+}
+#loginPage{
+    margin-left: 30px;
+    color:"#000099";
+   visibility: hidden;
+         font-family: "Whale";
+}
+#inrollmentPage{
+    margin-left: 30px;
+    visibility: hidden;
+         font-family: "Whale";
+}
+#Choose{
+    visibility: hidden;
+         font-family: "Whale";
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      font-family: "Whale";
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color:white; 
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color:darkblue;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: darkblue;
+    color: white;
+}
+#game{
+    height: 430px;
+     visibility: hidden;
+    font-family: "Whale";
+    font-size: 13px;
+}
+#lblScore{
+    width: 50px;
+    height: 10px;
+	background: none;
+	border:none;
+}
+#lblTime{
+     width: 60px;
+     height: 10px;
+	background: none;
+	border:none;
+}
+.lblLives{
+    width: 20px;
+     height: 17px;
+	cursor: none;
+}
+#lblName{
+    width: 60px;
+     height: 10px;
+	background: none;
+	border:none;
+}
+#gamedetails{
+    display:inline-flex;
+}
+#dialog{
+	 visibility: hidden;
+	display: none;
+}
+.downbuttons{
+    display:inline-block;
+    background-color:darkblue;
+    color:white;
+      font-family: "Whale";
+    font-size: 15px;
+    border-radius: 10%;
+    cursor: pointer;
+        border-style:inset;
+            outline: none;
+}
+label.error{
+	color:red;
+	font-size: 10px;
+	font-family: "Arial";
+	margin-left: 20px;
+}
+td{
+	text-align: left ;
+}
+#overlay-container{
+    position:absolute;
+    background: rgba(0,0,0,0.7);
+    height: 430px;
+}
+#overlay-content{
+    position: absolute;
+    top:33%;
+    margin-top: 0;
+}
+#canvas{
+    text-align: center;
+	background-image:url("img/backgame.jpg");
+}
+.bestofthebest{
+width:90%;
+		border:none;
+	background-color:lightgrey; 
+	color: darkgoldenrod;
+		text-align: center;
+}
+@font-face {
+    font-family: 'PAC-FONT';
+    src: url('font/PAC-FONT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Whale';
+    src: url('font/OhWhale.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}

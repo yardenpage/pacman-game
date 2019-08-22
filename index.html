@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Pac-Man.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script src="game.js"></script>
+	<script src="properties.js"></script>
+	<script src="dist/sweetalert.min.js"></script>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta property="og:type" content="Game" />
+	<meta property="og:title" content="PacMan" />
+	<meta property="og:description" content="Developed Pacman Game" />
+	<title> PacMan </title>
+</head>
+
+<body>
+
+	<div id="Layout">
+		<div id="top">
+			<div id="Header">
+				<img src=img/logopac.png width=270px height=80px /> <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+				&nbsp; &nbsp; &nbsp; &nbsp; Yarden Page 204154181 & Dana Feldman 308365493 </div>
+			<div id="Menu">
+				<div class="buttons">
+
+					<button onclick="javascript:WelcomeClick()" class="buttonsright"><img src=img/pinkpac.png
+							height=20px />Welcome</button>
+					<button onclick="javascript:InrollmentClick()" class="buttonsleft"><img src=img/bluepac.png
+							height=20px />Register</button>
+					<button onclick="javascript:LoginClick()" class="buttonsright"><img src=img/redpac.png
+							height=20px />Login</button>
+					<button onclick="javascript:AboutClick()" class="buttonsleft"><img src=img/orangepac.png
+							height=20px />About</button>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<div id="Content">
+
+
+			<div id="Welcome">
+				<br>
+				<img id="logo" src=img/logoclear.png width=130px height=40px />
+				<div class="welcomebuttons">
+					Welcome To the PacMan game! <br />
+					<button onclick="javascript:InrollmentClick()">Register</button>
+					<button onclick="javascript:LoginClick()">Login</button><br /><br /><br />
+					<img src="img/ghosts.gif" height=150px width=500px />
+				</div>
+			</div>
+
+
+			<div id="inrollmentPage" class="inrollment">
+				<br /> <br />
+				<div class="title"> <img class=pacmenu src=img/Pac-Man.png /> Registration</div><br /> <br />
+				Fill Your Details:<br /> <br />
+				<form action="mailto:yarden.page1@gmail.com" method="post" id="register-form" name="register-form"
+					enctype="text/plain">
+					<table width="700" border="0" cellspacing="3" cellpadding="0" height="122" id="tableR">
+						<tr>
+							<td width="150px">User Name:</td>
+							<td><input id="username" name="username" value="" size="30" type="text" tabindex="1"
+									required pattern="^\w+$"
+									title="Username must not be blank and contain only letters and numbers."></td>
+						</tr>
+						<tr>
+							<td> Password: </td>
+							<td> <input id="pwd1" name="pwd1" value="" size="30" type="password" minlength="8"
+									tabindex="1" required pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+									title="Password must contain at least 8 characters, including letters and numbers both."
+									onchange="form.password.pattern = this.value;"></td>
+						</tr>
+						<tr>
+							<td> Confirm Password:</td>
+							<td> <input id="pwd2" name="pwd2" value="" size="30" type="password" minlength="8"
+									tabindex="1" required pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+									title="Please enter the same Password as above."></td>
+						</tr>
+						<tr>
+							<td>First Name:</td>
+							<td><input name="firstname" id="firstname" value="" size="30" type="text" tabindex="1"
+									required pattern="^[a-zA-Z]+$" title="First name must contain only letters."></td>
+						</tr>
+						<tr>
+							<td>Last Name:</td>
+							<td> <input name="lastname" id="lastname" value="" size="30" type="text" tabindex="1"
+									required pattern="^[a-zA-Z]+$" title="Last name contain only letters."></td>
+						</tr>
+						<tr>
+							<td>Gender:</td>
+							<td><input type="radio" value="female" name="gender" tabindex="8">female<input type="radio"
+									name="gender" value="male" tabindex="9">male</td>
+						</tr>
+						<tr>
+							<td> Email:</td>
+							<td><input name="mail" id="mail" size="30" type="email" tabindex="10" required></td>
+						</tr>
+
+						<tr>
+							<td>Date of birth:</td>
+							<td> <select id="dobday" name="dobday" size="1" tabindex="6" required>
+									<option value="">day</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+									<option value="13">13</option>
+									<option value="14">14</option>
+									<option value="15">15</option>
+									<option value="16">16</option>
+									<option value="17">17</option>
+									<option value="18">18</option>
+									<option value="19">19</option>
+									<option value="20">20</option>
+									<option value="21">21</option>
+									<option value="22">22</option>
+									<option value="23">23</option>
+									<option value="24">24</option>
+									<option value="25">25</option>
+									<option value="26">26</option>
+									<option value="27">27</option>
+									<option value="28">28</option>
+									<option value="29">29</option>
+									<option value="30">30</option>
+									<option value="31">31</option>
+								</select>
+								<select id="dobmonth" name="dobmonth" size="1" tabindex="5" required>
+									<option value="">month</option>
+									<option value="January">January</option>
+									<option value="February">February</option>
+									<option value="March">March</option>
+									<option value="April">April</option>
+									<option value="May">May</option>
+									<option value="June">June</option>
+									<option value="July">July</option>
+									<option value="August">August</option>
+									<option value="September">September</option>
+									<option value="October">October</option>
+									<option value="November">November</option>
+									<option value="December">December</option>
+								</select> <select id="dobyear" name="dobyear" size="1" tabindex="7" required>
+									<option value="" class="item">year</option>
+									<option value="1940">1940</option>
+									<option value="1941">1941</option>
+									<option value="1942">1942</option>
+									<option value="1943">1943</option>
+									<option value="1944">1944</option>
+									<option value="1945">1945</option>
+									<option value="1946">1946</option>
+									<option value="1947">1947</option>
+									<option value="1948">1948</option>
+									<option value="1949">1949</option>
+									<option value="1950">1950</option>
+									<option value="1951">1951</option>
+									<option value="1951">1952</option>
+									<option value="1953">1953</option>
+									<option value="1954">1954</option>
+									<option value="1955">1955</option>
+									<option value="1956">1956</option>
+									<option value="1957">1957</option>
+									<option value="1958">1958</option>
+									<option value="1959">1959</option>
+									<option value="1960">1960</option>
+									<option value="1961">1961</option>
+									<option value="1962">1962</option>
+									<option value="1963">1963</option>
+									<option value="1964">1964</option>
+									<option value="1965">1965</option>
+									<option value="1966">1966</option>
+									<option value="1967">1967</option>
+									<option value="1968">1968</option>
+									<option value="1969">1969</option>
+									<option value="1970">1970</option>
+									<option value="1971">1971</option>
+									<option value="1972">1972</option>
+									<option value="1973">1973</option>
+									<option value="1974">1974</option>
+									<option value="1975">1975</option>
+									<option value="1976">1976</option>
+									<option value="1977">1977</option>
+									<option value="1978">1978</option>
+									<option value="1979">1979</option>
+									<option value="1980">1980</option>
+									<option value="1981">1981</option>
+									<option value="1982">1982</option>
+									<option value="1983">1983</option>
+									<option value="1984">1984</option>
+									<option value="1985">1985</option>
+									<option value="1986">1986</option>
+									<option value="1987">1987</option>
+									<option value="1988">1988</option>
+									<option value="1989">1989</option>
+									<option value="1990">1990</option>
+									<option value="1991">1991</option>
+									<option value="1992">1992</option>
+									<option value="1993">1993</option>
+									<option value="1994">1994</option>
+									<option value="1995">1995</option>
+									<option value="1996">1996</option>
+									<option value="1997">1997</option>
+									<option value="1998">1998</option>
+									<option value="1999">1999</option>
+									<option value="2000">2000</option>
+									<option value="2001">2001</option>
+									<option value="2002">2002</option>
+									<option value="2003">2003</option>
+									<option value="2004">2004</option>
+									<option value="2005">2005</option>
+									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+								</select></td>
+						</tr>
+					</table>
+					<br />
+					<button id="sendRegister" width="30px" height="10px" type="submit"
+						class="sendbuttons">register</button>
+					<button id="reset" width="30px" height="10px" type="reset" class="sendbuttons">reset</button>
+				</form>
+			</div>
+			<div id="loginPage" class="lognin">
+				<br /><br />
+				<div class="title"> <img class=pacmenu src=img/Pac-Man.png />Login</div><br /> <br />
+				<form id="formin" method="post" name="formin" action="" enctype="text/plain"
+					onsubmit=" return LogincheckUserAndPassword(usernamein.value, passwordin.value)">
+					<table>
+						<tr>
+							<td>UserName:</td>
+							<td><input id="usernamein" name="username" size="20" type="text" tabindex="1"></td>
+						</tr>
+						<tr>
+							<td>Password:</td>
+							<td><input id="passwordin" name="password" size="20" type="password" tabindex="1"></td>
+						</tr>
+					</table> <br />
+					<input id="submitlogin" type="submit" value="login" size="60" class="sendbuttons">
+				</form> <br />
+
+				<img src="img/giphy5.gif" height=200px />
+			</div>
+			<div id="aboutPage" class="modal">
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<h2>About</h2>
+					</div>
+					<div class="modal-body">
+						<p><b>Writers:</b><br> Yarden Page and Dana Feldman</p>
+						<p><b>Using in jQuery Plugin:</b><br> We used jQuery Plugin in the register form.<br>
+							We checked if all the feilds filled, if the password contains numbers and letters both<br>
+							and at least 8 character, if the first and last name not includes numbers<br> and if the
+							mail is a valid mail. </p>
+						<p><b>No Use in Template:</b><br> we build all the the div pattern by owerself.</p>
+						<p><b>Difficulities:</b><br>
+							It was difficult to synchronize between the ghosts and the pacman movement,<br>
+							to display the board according the user requests, to show and hide the wanted div,<br>
+							there is no seperates between the parts and all is located in one page<br>
+							so it is hard to follow after the code, <br>
+							adding the jQuery code made a lot of problems until it completly worked.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<h3><img class=pacmenu src=img/Pac-Man.png />Enjoy Your Visit</h3>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="Choose" id="Choose">
+				<br>
+				<form id="formChoose" method="post" name="formChoose" action=""
+					onsubmit="return DisplayGame(quantity, point5, point15, point25, time, ghosts)">
+					<h1><img class=pacmenu src=img/Pac-Man.png /> Choose Your Properties:</h1>
+					Quantity of balls (between 50 and 90):
+					<input type="number" name="quantity" min="50" max="90" value="50" required>
+					<br />
+					<br />
+
+					Time of the game in sec (min 60 sec):
+					<input type="number" name="time" min="60" max="600" value="60" required>
+					<br />
+					<br />
+					Quantity of ghosts (between 1 and 3):
+					<input type="number" name="ghosts" min="1" max="3" value="1" required>
+					<br />
+					<br />
+					Select the Color of the 5 point ball:
+					<input type="color" id="point5" name="point5" value="#ff9933">
+					<br />
+					<br />
+					Select the Color of the 15 point ball:
+					<input type="color" id="point15" name="point15" value="#990099">
+
+					<br />
+					<br />
+					Select the Color of the 25 point ball:
+					<input type="color" id="point25" name="point25" value="#009933">
+
+					<br />
+					<br />
+					<br />
+					<input id="submit" type="submit" value="submit" size="50" class="sendbuttons">
+
+					<input id="reset" type="reset" value="reset" size="50" class="sendbuttons">
+				</form>
+			</div>
+
+
+
+
+
+
+			<div id="game">
+				<br /> <br />
+				<div id="gamedetails">
+					<div class="nameOfPlayer">
+						PLAYER: &nbsp;
+						<input id="lblName" type="text" readonly />&nbsp;
+					</div>
+					<div class="score">
+						SCORE: &nbsp; </div>
+					<input id="lblScore" type="text" readonly /> &nbsp;
+					<div class="time">
+						TIME:&nbsp;&nbsp;
+					</div>
+					<input id="lblTime" type="text" readonly />&nbsp;&nbsp; &nbsp;
+					<div class="lives"> LIVES:&nbsp; </div>
+					<input class="lblLives" id="lblLives1" type="image" readonly />
+					<input class="lblLives" id="lblLives2" type="image" readonly />
+					<input class="lblLives" id="lblLives3" type="image" readonly />
+					<input class="lblLives" id="lblLives4" type="image" readonly />
+				</div>
+				<br />
+				<br />
+				<canvas id="canvas" height="360" width="480"></canvas> <br> <br>
+				<button class="downbuttons" onclick="zerointerval()">Start New Game</button>
+				<button class="downbuttons" id="pause" onclick="pause()"> Pause </button>
+				<button class="downbuttons" id="resume" onclick="resume()"> Resume </button>
+
+
+
+
+
+
+			</div>
+		</div>
+		<div id="Details">
+			<br />
+			<img src=img/crown.png width=90% />
+			<br /><br />
+			<b>Best Player:</b> <br />
+			<input class="bestofthebest" id="bestplayer" type="text" value="Yarden Page" readonly /><br /> <br />
+			<b>Highest Score:</b> <br />
+			<input class="bestofthebest" id="highestscore" type="number" value=50 readonly /> <br /> <br />
+			<b> Life Reminds: </b> <br />
+			<input class="bestofthebest" id="liferemind" type="number" value=1 readonly />
+		</div>
+	</div>
+	<div id="Footer">
+		<center>
+			© 2017 Yarden Page and Dana Feldman, To Contact Send An Email To: yarden.page1@gmail.com
+		</center>
+	</div>
+</body>
+
+</html>
